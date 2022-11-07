@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json.schemastore.org/nest-cli",
+  "collection": "@nestjs/schematics",
+  "sourceRoot": "apps/answers/src",
+  "monorepo": true,
+  "root": "apps/answers",
+  "compilerOptions": {
+    "webpack": true,
+    "tsConfigPath": "apps/answers/tsconfig.app.json"
+  },
+  "projects": {
+    "answers": {
+      "type": "application",
+      "root": "apps/answers",
+      "entryFile": "main",
+      "sourceRoot": "apps/answers/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/answers/tsconfig.app.json"
+      }
+    },
+    "api-gateway": {
+      "type": "application",
+      "root": "apps/api-gateway",
+      "entryFile": "main",
+      "sourceRoot": "apps/api-gateway/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/api-gateway/tsconfig.app.json"
+      }
+    },
+    "questions": {
+      "type": "application",
+      "root": "apps/questions",
+      "entryFile": "main",
+      "sourceRoot": "apps/questions/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/questions/tsconfig.app.json"
+      }
+    }
+  }
+}
